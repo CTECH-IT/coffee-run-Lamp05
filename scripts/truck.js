@@ -27,7 +27,7 @@
         // go through the list of emails and get the associated order
         customerIdArray.forEach(function (id) {
             console.log(this.db.get(id));
-        });
+        }.bind(this));
     }
 
     App.Truck = Truck;
