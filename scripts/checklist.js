@@ -1,6 +1,6 @@
 (function (window) {
     'use strict';
-    let App = window.app || {};
+    let App = window.App || {};
     let $ = window.jQuery;
     function CheckList(selector) {
         if (!selector) {
@@ -32,12 +32,12 @@
             type: 'checkbox',
             value: coffeeOrder.emailAddress
         });
-    }
 
-    let description = coffeeOrder.size + ' ';
-    if (coffeeOrder.flavor) {
-        description += coffeeOrder.flavor + ' ';
 
+        let description = coffeeOrder.size + ' ';
+        if (coffeeOrder.flavor) {
+            description += coffeeOrder.flavor + ' ';
+        }
         description += coffeeOrder.coffee + ', ';
         description += ' (' + coffeeOrder.emailAddress + ')';
         description += ' [' + coffeeOrder.strength + 'x]';
