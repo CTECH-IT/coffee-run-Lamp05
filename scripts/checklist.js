@@ -50,6 +50,6 @@
     }
 
     // Add the Checklist to the App namespace
-    App.Checklist = CheckList;
+    App.CheckList = CheckList;
     window.App = App;
 })(window);
