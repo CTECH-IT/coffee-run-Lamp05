@@ -33,8 +33,9 @@
             func(data); // call the function that was passed in on the data from the form
 
             this.reset(); // reset the form
+            this.elements[0].focus(); // focus on the first field
         });
-    }
+    };
 
     App.FormHandler = FormHandler;
     window.App = App;

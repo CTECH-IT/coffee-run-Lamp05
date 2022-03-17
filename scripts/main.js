@@ -16,6 +16,9 @@
     window.myTruck = myTruck;
 
     let formHandler = new FormHandler(FORM_SELECTOR);
+
+    // when a checkbox is clicked, call "deliverOrder" on myTruck
+    checkList.addClickHandler(myTruck.deliverOrder.bind(myTruck));
     
     // when the submit button is called, create the order and add a checkbox
     formHandler.addSubmitHandler(function (data) {
