@@ -17,6 +17,15 @@
         });
     };
 
+    RemoteDataStore.prototype.getAll = function (cb) {
+        // make a "get" call to the server URL
+        // pass in an anonymous function that calls the "cb" callback function
+        $.get(this.serverUrl, function (serverResponse) {
+            console.log(serverResponse);
+            cb(serverResponse);
+        });
+    };
+
     App.RemoteDataStore = RemoteDataStore;
     window.App = App;
 })(window);
