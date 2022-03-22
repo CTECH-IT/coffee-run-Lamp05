@@ -36,6 +36,11 @@
         });
     };
 
+    RemoteDataStore.prototype.remove = function (key) {
+        // call the server url using the ajax 'DELETE' command
+        $.ajax(this.serverUrl + '?emailAddress=' + key, { type: 'DELETE' });
+    };
+
     App.RemoteDataStore = RemoteDataStore;
     window.App = App;
 })(window);
